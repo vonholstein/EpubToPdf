@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "epubtopdf"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+beautifulsoup4 = "^4.5.3"
+lxml = "^4.6.3"
+pdfkit = "^0.6.1"
+PyPDF2 = "^1.26.0" 
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -12,7 +12,10 @@ Clone this repository to your machine.
 
 To install the requirements, run the following command:
 
-```pip install -r requirements.txt```
+``` sh
+poetry init
+poetry install
+```
 
 After this, you install the _wkhtmltopdf_ which is a dependency of the _pdfkit_ module.
 
@@ -30,7 +33,11 @@ should do the trick.
 
 If you get a `QXcbConnection: Could not connect to display` error, check [this issue](https://github.com/JazzCore/python-pdfkit/issues/82).
 
+For Mac M1/M2/M3 users wkhtmltopdf is not compiled for arm64 so you need to enable [Rosetta](https://support.apple.com/en-ca/HT211861) 
 
+``` sh
+softwareupdate --install-rosetta --agree-to-license
+```
 
 **Usage**
 
@@ -40,4 +47,7 @@ Run the main.py file, adding the name of the epub file as a commandline argument
 
 As shown below:
 
-```python main.py epub-file-name```
+``` sh
+poetry run python3 epubtopdf/main.py ./epub-file-name
+```
+
